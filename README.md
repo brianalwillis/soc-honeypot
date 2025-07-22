@@ -449,7 +449,7 @@ New Workbook
 
 <img width="815" height="713" alt="Lab 54" src="https://github.com/user-attachments/assets/4ff54676-f319-45ea-8d17-8e11e9d346af" />
 
-### *On the `Advanced Editor` Tab, copy and paste:*
+### *On the `Advanced Editor` Tab, copy and paste the `json`, then click `Done Editing`.*
 
 ```json
 {
