@@ -48,27 +48,71 @@ The objective of this project was to design and implement a simulated `Security 
 
 ---
 
-## 𝙲𝚁𝙴𝙰𝚃𝙴 𝚃𝙷𝙴 𝙷𝙾𝙽𝙴𝚈𝙿𝙾𝚃
+## 𝙲𝚁𝙴𝙰𝚃𝙴 𝙰 𝚁𝙴𝚂𝙾𝚄𝚁𝙲𝙴 𝙶𝚁𝙾𝚄𝙿
 
-### Step 1: Go to `portal.azure.com` and search for `virtual machines`
+### Step 1: Go to `portal.azure.com` and search for `Resource Groups`
 
-<img width="626" height="279" alt="Extra 1" src="https://github.com/user-attachments/assets/1b5184f5-0b63-47e0-bb00-bad092289d57" />
+<img width="626" height="279" alt="Extra 1" src="https://github.com/user-attachments/assets/e879227c-64d5-4437-8d15-4df415684957" />
 
-### Step 2: `+Create` a new `virtual machine`
+### Step 2: `+ Create` a Resource Group
 
-<img width="433" height="599" alt="Extra 2" src="https://github.com/user-attachments/assets/f3e8dc4d-470a-4d60-9012-ee34b574ed68" />
+```
+Basics
 
-### Step 3: My `virtual machine` settings
+Resource Group
+└─ Subscription: Azure Subscription 1  
+└─ Resource Group Name: RG-willis 
+└─ Region: (US) East US 2
+```
+
+### Step 4: Review + Create → Create (When Prompted)
+
+---
+
+## 𝙲𝚁𝙴𝙰𝚃𝙴 𝙰 𝚅𝙸𝚁𝚃𝚄𝙰𝙻 𝙽𝙴𝚃𝚆𝙾𝚁𝙺
+
+### Step 1: In Azure Portal, search for `Virtual Network` 
+
+<img width="626" height="279" alt="Extra 1" src="https://github.com/user-attachments/assets/3ad66e12-4e04-4654-b7cf-7f832f85da22" />
+
+### Step 2: `+ Create` Virtual Network
 
 ```
 Basics
 
 Project Details
 └─ Subscription: Azure Subscription 1  
-  └─ Resource Group: Create New
+└─ Resource Group Name: RG-willis 
+Instance Details
+└─ Virtual Network Name: vnet-willis
+└─ Region: (US) East US 2
+```
+
+### Step 4: Review + Create → Create (When Prompted)
+
+---
+
+## 𝙲𝚁𝙴𝙰𝚃𝙴 𝙰 𝚅𝙸𝚁𝚃𝚄𝙰𝙻 𝙼𝙰𝙲𝙷𝙸𝙽𝙴
+
+### Step 1: In Azure Portal, search for `Virtual Machines`
+
+<img width="626" height="279" alt="Extra 1" src="https://github.com/user-attachments/assets/1b5184f5-0b63-47e0-bb00-bad092289d57" />
+
+### Step 2: `+ Create` a new `virtual machine`
+
+<img width="433" height="599" alt="Extra 2" src="https://github.com/user-attachments/assets/f3e8dc4d-470a-4d60-9012-ee34b574ed68" />
+
+### Step 3: My `Virtual Machine` settings
+
+```
+Basics
+
+Project Details
+└─ Subscription: Azure Subscription 1  
+  └─ Resource Group: RG-willis
 Instance Details 
 └─ Virtual Machine Name: CORP-NET-EAST  
-└─ Region: (US) East US
+└─ Region: (US) East US 2
 └─ Image: Windows 10 Pro, Version 22H2 - x64 Gen2  
 Size
 └─ Standard_B1s 1 vCPU, 1 GiB RAM  
@@ -108,6 +152,61 @@ Diagnostics
 ### Step 4: Review + Create → Create (When Prompted)
 
 ---
+
+## 🍯 𝙲𝚁𝙴𝙰𝚃𝙴 𝚃𝙷𝙴 𝙷𝙾𝙽𝙴𝚈𝙿𝙾𝚃
+
+### Step 1: Go to the `Network Security Group` inside your `Virtual Machine`
+
+```
+CORP-NET-EAST
+└─ Networking
+  └─ Network Settings
+```
+
+---
+
+### Step 2: Delete the `RDP` `Inbound Security Rule`
+
+<img width="2196" height="402" alt="Lab 23" src="https://github.com/user-attachments/assets/7dd7b6d6-ca5d-487c-a7c0-4608d753a10a" />
+
+---
+
+### Step 3: `+ Add` a new `Inbound Security Rule`
+
+```
+Add Inbound Security Rule
+└─ Source: Any
+└─ Source Port Ranges: *
+└─ Destination: *
+└─ Service: Custom
+└─ Destination Port Ranges: *
+└─ Protocol: Any
+└─ Action: Allow
+└─ Priority: 300
+└─ Name: DANGER_AllowAnyCustomAnyInbound
+```
+
+---
+
+### Step 4: Log into your `Virtual Machine` with `Remote Desktop Connection`
+
+<img width="405" height="248" alt="Extra 5" src="https://github.com/user-attachments/assets/747f1402-0f15-4f73-ace8-cfc2f558e4d7" />
+
+---
+
+### Step 5: Turn off the Windows Defender Firewall
+
+```
+Win + R
+└─ wf.msc
+```
+
+<img width="1041" height="779" alt="Lab 28" src="https://github.com/user-attachments/assets/0562dc50-79da-4c5e-b018-1fff70469493" />
+
+
+
+
+
 
 
 
