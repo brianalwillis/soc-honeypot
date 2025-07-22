@@ -60,12 +60,12 @@ The objective of this project was to design and implement a simulated `Security 
 Basics
 
 Resource Group
-└─ Subscription: Azure Subscription 1  
-└─ Resource Group Name: RG-willis 
-└─ Region: (US) East US 2
+  └─ Subscription: Azure Subscription 1  
+  └─ Resource Group Name: RG-willis 
+  └─ Region: (US) East US 2
+Review + Create
+  └─ Create (When Prompted)
 ```
-
-### Step 4: Review + Create → Create (When Prompted)
 
 ---
 
@@ -81,14 +81,14 @@ Resource Group
 Basics
 
 Project Details
-└─ Subscription: Azure Subscription 1  
-└─ Resource Group Name: RG-willis 
+  └─ Subscription: Azure Subscription 1  
+  └─ Resource Group Name: RG-willis 
 Instance Details
-└─ Virtual Network Name: vnet-willis
-└─ Region: (US) East US 2
+  └─ Virtual Network Name: vnet-willis
+  └─ Region: (US) East US 2
+Review + Create
+  └─ Create (When Prompted)
 ```
-
-### Step 4: Review + Create → Create (When Prompted)
 
 ---
 
@@ -108,48 +108,51 @@ Instance Details
 Basics
 
 Project Details
-└─ Subscription: Azure Subscription 1  
+  └─ Subscription: Azure Subscription 1  
   └─ Resource Group: RG-willis
 Instance Details 
-└─ Virtual Machine Name: CORP-NET-EAST  
-└─ Region: (US) East US 2
-└─ Image: Windows 10 Pro, Version 22H2 - x64 Gen2  
+  └─ Virtual Machine Name: CORP-NET-EAST  
+  └─ Region: (US) East US 2
+  └─ Image: Windows 10 Pro, Version 22H2 - x64 Gen2  
 Size
-└─ Standard_B1s 1 vCPU, 1 GiB RAM  
+  └─ Standard_B1s 1 vCPU, 1 GiB RAM  
 Administrator Account
-└─ Username: YourUsername
-└─ Password: YourPassword
-└─ Confirm Password: YourPassword  
+  └─ Username: YourUsername
+  └─ Password: YourPassword
+  └─ Confirm Password: YourPassword  
 Licensing  
-└─ ☑ I confirm I have an eligible Windows 10/11 license
+  └─ ☑ I confirm I have an eligible Windows 10/11 license
 ```
 
 ```
 Disks
 
 OS Disk
-└─ OS Disk Type: Standard HDD 
+  └─ OS Disk Type: Standard HDD 
 ```
 
 ```
 Networking
 
 Network Interface
-└─ Virtual Network: Create New 
-└─ Subnet: Default 
-└─ Public IP: (new)  
-└─ NIC Network Security Group: Basic
-└─ ☑ Delete public IP and NIC when VM is deleted 
+  └─ Virtual Network: Create New 
+  └─ Subnet: Default 
+  └─ Public IP: (new)  
+  └─ NIC Network Security Group: Basic
+  └─ ☑ Delete public IP and NIC when VM is deleted 
 ```
 
 ```
 Monitoring
 
 Diagnostics
-└─ Boot Diagnostics: Disable 
+  └─ Boot Diagnostics: Disable 
 ```
 
-### Step 4: Review + Create → Create (When Prompted)
+```
+Review + Create
+  └─ Create (When Prompted)
+```
 
 ---
 
@@ -175,15 +178,15 @@ YourVirtualMachine
 
 ```
 Add Inbound Security Rule
-└─ Source: Any
-└─ Source Port Ranges: *
-└─ Destination: *
-└─ Service: Custom
-└─ Destination Port Ranges: *
-└─ Protocol: Any
-└─ Action: Allow
-└─ Priority: 300
-└─ Name: DANGER_AllowAnyCustomAnyInbound
+  └─ Source: Any
+  └─ Source Port Ranges: *
+  └─ Destination: *
+  └─ Service: Custom
+  └─ Destination Port Ranges: *
+  └─ Protocol: Any
+  └─ Action: Allow
+  └─ Priority: 300
+  └─ Name: DANGER_AllowAnyCustomAnyInbound
 ```
 
 ---
@@ -196,9 +199,9 @@ YourVirtualMachine
   └─ Public IP Address
 ```
 
-<img width="405" height="248" alt="Extra 5" src="https://github.com/user-attachments/assets/747f1402-0f15-4f73-ace8-cfc2f558e4d7" />
+<img width="405" height="248" alt="Extra 5" src="https://github.com/user-attachments/assets/747f1402-0f15-4f73-ace8-cfc2f558e4d7" /></br>
 
-*Note: You will need the **username** and **password** you used to create your Virtual Machine to log in.*
+***Note:** You will need the **username** and **password** you used to create your Virtual Machine to log in.*
 
 ---
 
@@ -206,7 +209,7 @@ YourVirtualMachine
 
 ```
 Win + R
-└─ wf.msc
+  └─ wf.msc
 ```
 
 <img width="1041" height="779" alt="Lab 28" src="https://github.com/user-attachments/assets/0562dc50-79da-4c5e-b018-1fff70469493" />
@@ -236,9 +239,59 @@ Win + R
 
 <img width="907" height="381" alt="Lab 31" src="https://github.com/user-attachments/assets/c7d293e9-db4b-4623-8bb1-454948581740" /></br>
 
-*Note: EventID `4625` is a failed logon attempt. We can investigate further and see that a user named `employee` tried to log into our Virtual Machine. The honeypot is ready!*
+***Note:** EventID `4625` is a failed logon attempt. We can investigate further and see that a user named `employee` tried to log into our Virtual Machine. The honeypot is live!*
 
 ---
+
+## 𝙲𝚁𝙴𝙰𝚃𝙴 𝙰 𝙻𝙾𝙶 𝙰𝙽𝙰𝙻𝚈𝚃𝙸𝙲𝚂 𝚆𝙾𝚁𝙺𝚂𝙿𝙰𝙲𝙴
+
+### Step 1: In Azure Portal, search for `Log Analytics Workspaces` 
+
+<img width="626" height="279" alt="Extra 1" src="https://github.com/user-attachments/assets/90014f16-a3ad-4234-b7d7-5ebcca19d05a" />
+
+### Step 2: `+ Create` a new `Log Analytics Workspace`
+
+```
+Basics
+
+Project Details
+  └─ Subscription: Azure Subscription 1  
+  └─ Resource Group: RG-willis
+Instance Details 
+  └─ Name: LAW-Willis  
+  └─ Region: (US) East US 2
+Review + Create
+  └─ Create (When Prompted)
+```
+
+---
+
+## 𝙰𝙲𝚃𝙸𝚅𝙰𝚃𝙴 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝚂𝙴𝙽𝚃𝙸𝙽𝙴𝙻
+
+### Step 1: In Azure Portal, search for `Microsoft Sentinel` 
+
+<img width="626" height="279" alt="Extra 1" src="https://github.com/user-attachments/assets/0ff5da10-d4bc-499c-b1d2-f903af0417a4" />
+
+### Step 2: Select Your `Log Analytics Workspace` and `Add`
+
+<img width="1173" height="124" alt="Lab 7" src="https://github.com/user-attachments/assets/e41d901e-57a8-4bfa-8406-a226fb2f9faa" />
+
+### Step 3: In Microsoft Sentinel, Install Windows Security Events  
+
+```
+Content Management
+  └─ Content Hub  
+Search: Security Event
+  └─ ☑ Windows Security Events
+    └─ Install
+```
+
+
+
+
+
+
+
 
 
 
