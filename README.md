@@ -226,7 +226,7 @@ YourVirtualMachine
 
 ---
 
-### Step 5: Turn off the Windows Defender Firewall
+### Step 5: Turn off the `Windows Defender Firewall`
 
 ```
 Win + R
