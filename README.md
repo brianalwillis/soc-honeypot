@@ -403,6 +403,108 @@ Review + Create
 
 ---
 
+### *This query filters failed login attempts (`Event ID 4625`) from the IP address `142.127.226.188`, then enriches the results with `GeoIP` data such as `city`, `country`, and `coordinates`.*
+
+```kql
+let GeoIPDB_FULL = _GetWatchlist("geoip");
+let WindowsEvents = SecurityEvent
+    | where IpAddress == "142.127.226.188"
+    | where EventID == 4625
+    | order by TimeGenerated desc;
+WindowsEvents
+| evaluate ipv4_lookup(GeoIPDB_FULL, IpAddress, network)
+| project TimeGenerated, Computer, AttackerIp = IpAddress, cityname, countryname, latitude, longitude
+```
+
+<img width="1046" height="710" alt="Lab 52" src="https://github.com/user-attachments/assets/8fce71cf-9edc-46ee-8220-e8e7d6a4350e" />
+
+---
+
+## 𝙲𝚁𝙴𝙰𝚃𝙸𝙽𝙶 𝙰 𝙼𝙰𝙿 𝚆𝙾𝚁𝙺𝙱𝙾𝙾𝙺 𝙸𝙽 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝚂𝙴𝙽𝚃𝙸𝙽𝙴𝙻
+
+### Step 1: In Azure Portal, search for `Microsoft Sentinel` 
+
+---
+
+### Step 2: Add a `Workbook`, in `Microsoft Sentinel`
+
+```
+Microsoft Sentinel
+  └─ Threat Management
+    └─ Workbooks
+      └─ + Add Workbook
+```
+
+---
+
+### Step 3: Create a new `Workbook`
+
+```
+New Workbook
+  └─ Edit
+    └─ Remove Prepopulated Content
+      └─ + Add
+        └─ Add Query
+```
+
+<img width="815" height="713" alt="Lab 54" src="https://github.com/user-attachments/assets/4ff54676-f319-45ea-8d17-8e11e9d346af" />
+
+### *On the `Advanced Editor` Tab, copy and paste:*
+
+```json
+{
+	"type": 3,
+	"content": {
+	"version": "KqlItem/1.0",
+	"query": "let GeoIPDB_FULL = _GetWatchlist(\"geoip\");\nlet WindowsEvents = SecurityEvent;\nWindowsEvents | where EventID == 4625\n| order by TimeGenerated desc\n| evaluate ipv4_lookup(GeoIPDB_FULL, IpAddress, network)\n| summarize FailureCount = count() by IpAddress, latitude, longitude, cityname, countryname\n| project FailureCount, AttackerIp = IpAddress, latitude, longitude, city = cityname, country = countryname,\nfriendly_location = strcat(cityname, \" (\", countryname, \")\");",
+	"size": 3,
+	"timeContext": {
+		"durationMs": 2592000000
+	},
+	"queryType": 0,
+	"resourceType": "microsoft.operationalinsights/workspaces",
+	"visualization": "map",
+	"mapSettings": {
+		"locInfo": "LatLong",
+		"locInfoColumn": "countryname",
+		"latitude": "latitude",
+		"longitude": "longitude",
+		"sizeSettings": "FailureCount",
+		"sizeAggregation": "Sum",
+		"opacity": 0.8,
+		"labelSettings": "friendly_location",
+		"legendMetric": "FailureCount",
+		"legendAggregation": "Sum",
+		"itemColorSettings": {
+		"nodeColorField": "FailureCount",
+		"colorAggregation": "Sum",
+		"type": "heatmap",
+		"heatmapPalette": "greenRed"
+		}
+	}
+	},
+	"name": "query - 0"
+}
+```
+
+```kql
+let GeoIPDB_FULL = _GetWatchlist("geoip");
+let WindowsEvents = SecurityEvent;
+WindowsEvents | where EventID == 4625
+| order by TimeGenerated desc
+| evaluate ipv4_lookup(GeoIPDB_FULL, IpAddress, network)
+| summarize FailureCount = count() by IpAddress, latitude, longitude, cityname, countryname
+| project FailureCount, AttackerIp = IpAddress, latitude, longitude, city = cityname, country = countryname,
+friendly_location = strcat(cityname, " (", countryname, ")");
+```
+
+<img width="1145" height="603" alt="Lab 56" src="https://github.com/user-attachments/assets/ef0ca5ef-7add-4057-960e-c610299ac87c" />
+
+
+
+
+
+
 
 
 
