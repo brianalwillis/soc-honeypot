@@ -55,7 +55,7 @@ The objective of this project was to design and implement a simulated `Security 
 
 ---
 
-## 1. 𝚂𝙴𝚃𝚄𝙿 𝙰𝚉𝚄𝚁𝙴 𝚂𝚄𝙱𝚂𝙲𝚁𝙸𝙿𝚃𝙸𝙾𝙽
+# 1. 𝚂𝙴𝚃𝚄𝙿 𝙰𝚉𝚄𝚁𝙴 𝚂𝚄𝙱𝚂𝙲𝚁𝙸𝙿𝚃𝙸𝙾𝙽
 
 ### Step 1: Create a free Azure subscription: [`https://azure.microsoft.com`](https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account)
 
@@ -69,7 +69,7 @@ The objective of this project was to design and implement a simulated `Security 
 
 ---
 
-## 2. 𝙲𝚁𝙴𝙰𝚃𝙴 𝙰 𝚁𝙴𝚂𝙾𝚄𝚁𝙲𝙴 𝙶𝚁𝙾𝚄𝙿
+# 2. 𝙲𝚁𝙴𝙰𝚃𝙴 𝙰 𝚁𝙴𝚂𝙾𝚄𝚁𝙲𝙴 𝙶𝚁𝙾𝚄𝙿
 
 ### Step 1: Go to `portal.azure.com` and search for `Resource Groups`
 
@@ -90,7 +90,7 @@ Review + Create
 
 ---
 
-## 3. 𝙲𝚁𝙴𝙰𝚃𝙴 𝙰 𝚅𝙸𝚁𝚃𝚄𝙰𝙻 𝙽𝙴𝚃𝚆𝙾𝚁𝙺
+# 3. 𝙲𝚁𝙴𝙰𝚃𝙴 𝙰 𝚅𝙸𝚁𝚃𝚄𝙰𝙻 𝙽𝙴𝚃𝚆𝙾𝚁𝙺
 
 ### Step 1: In Azure Portal, search for `Virtual Network` 
 
@@ -113,7 +113,7 @@ Review + Create
 
 ---
 
-## 4. 𝙲𝚁𝙴𝙰𝚃𝙴 𝙰 𝚅𝙸𝚁𝚃𝚄𝙰𝙻 𝙼𝙰𝙲𝙷𝙸𝙽𝙴
+# 4. 𝙲𝚁𝙴𝙰𝚃𝙴 𝙰 𝚅𝙸𝚁𝚃𝚄𝙰𝙻 𝙼𝙰𝙲𝙷𝙸𝙽𝙴
 
 ### Step 1: In Azure Portal, search for `Virtual Machines`
 
@@ -177,7 +177,7 @@ Review + Create
 
 ---
 
-## 🍯 5. 𝙲𝚁𝙴𝙰𝚃𝙴 𝚃𝙷𝙴 𝙷𝙾𝙽𝙴𝚈𝙿𝙾𝚃
+# 🍯 5. 𝙲𝚁𝙴𝙰𝚃𝙴 𝚃𝙷𝙴 𝙷𝙾𝙽𝙴𝚈𝙿𝙾𝚃
 
 ### Step 1: Go to the `Network Security Group` inside your `Virtual Machine`
 
@@ -237,7 +237,7 @@ Win + R
 
 ---
 
-## 6. 𝚅𝙰𝙻𝙸𝙳𝙰𝚃𝙴 𝙷𝙾𝙽𝙴𝚈𝙿𝙾𝚃 𝙴𝚇𝙿𝙾𝚂𝚄𝚁𝙴
+# 6. 𝚅𝙰𝙻𝙸𝙳𝙰𝚃𝙴 𝙷𝙾𝙽𝙴𝚈𝙿𝙾𝚃 𝙴𝚇𝙿𝙾𝚂𝚄𝚁𝙴
 
 ### Step 1: From your `Local Machine`, ping your `Virtual Machine's` Public IP Address
 
