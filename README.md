@@ -166,12 +166,6 @@ YourVirtualMachine
 ---
 
 ### Step 2: Delete the `RDP` `Inbound Security Rule`
-
-```
-YourVirtualMachine
-└─ Overview
-  └─ Public IP Address
-```
   
 <img width="2196" height="402" alt="Lab 23" src="https://github.com/user-attachments/assets/7dd7b6d6-ca5d-487c-a7c0-4608d753a10a" />
 
@@ -196,7 +190,15 @@ Add Inbound Security Rule
 
 ### Step 4: Log into your `Virtual Machine` with `Remote Desktop Connection`
 
+```
+YourVirtualMachine
+└─ Overview
+  └─ Public IP Address
+```
+
 <img width="405" height="248" alt="Extra 5" src="https://github.com/user-attachments/assets/747f1402-0f15-4f73-ace8-cfc2f558e4d7" />
+
+*Note: You will need the **username** and **password** you used to create your Virtual Machine to log in.*
 
 ---
 
@@ -208,6 +210,38 @@ Win + R
 ```
 
 <img width="1041" height="779" alt="Lab 28" src="https://github.com/user-attachments/assets/0562dc50-79da-4c5e-b018-1fff70469493" />
+
+---
+
+## 𝚅𝙰𝙻𝙸𝙳𝙰𝚃𝙴 𝙷𝙾𝙽𝙴𝚈𝙿𝙾𝚃 𝙴𝚇𝙿𝙾𝚂𝚄𝚁𝙴
+
+### Step 1: From your `Local Machine`, ping your `Virtual Machine's` Public IP Address
+
+<img width="452" height="246" alt="Lab 29" src="https://github.com/user-attachments/assets/f560ce9c-ef11-4274-9da2-2424a312c787" />
+
+### Step 2: Simulate `Brute-Force` Attempts
+
+- ### Log out of your `Virtual Machine` and log back in with the incorrect username and password
+
+<img width="451" height="414" alt="Lab 30" src="https://github.com/user-attachments/assets/810de6dd-94ff-41ce-9b70-9f0623a5486e" />
+
+- ### Log back into your `Virtual Machine` and check `Event Viewer`
+
+```
+Win + R
+└─ eventvwr.msc
+  └─ Windows Logs
+    └─ Security
+```
+
+<img width="907" height="381" alt="Lab 31" src="https://github.com/user-attachments/assets/c7d293e9-db4b-4623-8bb1-454948581740" /></br>
+
+*Note: EventID `4625` is a failed logon attempt. We can investigate further and see that a user named `employee` tried to log into our Virtual Machine. The honeypot is ready!*
+
+---
+
+
+
 
 
 
