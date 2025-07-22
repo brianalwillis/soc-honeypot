@@ -741,6 +741,8 @@ Add Inbound Security Rule
   └─ Name: Deny--80.94.95.0-24
 ```
 
+<img width="2124" height="520" alt="Lab 1" src="https://github.com/user-attachments/assets/0325f06d-2753-4c5f-a6f4-940de9e06bf2" /></br>
+
 ### *The CIDR block `80.94.95.0/24` effectively covers all IP addresses from `80.94.95.0` to `80.94.95.255`. Implementing this as an `NSG` rule successfully blocked `80.94.95.43` and any other IPs within the `80.94.95.*` range from attempting to access the honeypot.*
 
 ---
