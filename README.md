@@ -52,6 +52,69 @@ The objective of this project was to design and implement a simulated `Security 
 
 ### Step 1: Go to `portal.azure.com` and search for `virtual machines`
 
+<img width="626" height="279" alt="Extra 1" src="https://github.com/user-attachments/assets/1b5184f5-0b63-47e0-bb00-bad092289d57" />
+
+### Step 2: `+Create` a new `virtual machine`
+
+<img width="433" height="599" alt="Extra 2" src="https://github.com/user-attachments/assets/f3e8dc4d-470a-4d60-9012-ee34b574ed68" />
+
+### Step 3: My `virtual machine` settings
+
+```
+Basics
+
+Project Details
+└─ Subscription: Azure Subscription 1  
+  └─ Resource Group: Create New
+Instance Details 
+└─ Virtual Machine Name: CORP-NET-EAST  
+└─ Region: (US) East US
+└─ Image: Windows 10 Pro, Version 22H2 - x64 Gen2  
+Size
+└─ Standard_B1s 1 vCPU, 1 GiB RAM  
+Administrator Account
+└─ Username: YourUsername
+└─ Password: YourPassword
+└─ Confirm Password: YourPassword  
+Licensing  
+└─ ☑ I confirm I have an eligible Windows 10/11 license
+```
+
+```
+Disks
+
+OS Disk
+└─ OS Disk Type: Standard HDD 
+```
+
+```
+Networking
+
+Network Interface
+└─ Virtual Network: Create New 
+└─ Subnet: Default 
+└─ Public IP: (new)  
+└─ NIC Network Security Group: Basic
+└─ ☑ Delete public IP and NIC when VM is deleted 
+```
+
+```
+Monitoring
+
+Diagnostics
+└─ Boot Diagnostics: Disable 
+```
+
+### Step 4: Review + Create → Create (When Prompted)
+
+---
+
+
+
+
+
+
+
 
 
 
