@@ -32,6 +32,27 @@
 
 The objective of this project was to design and implement a simulated `Security Operations Center` (SOC) environment in `Microsoft Azure`, centered around a `Windows 10` virtual machine acting as a `honeypot`. The goal was to attract and analyze real-world unauthorized access attempts by exposing the VM to public traffic. Using tools such as `Microsoft Sentinel`, `Log Analytics Workspace`, and `Kusto Query Language` (KQL), I monitored, detected, and investigated threat activity. This project demonstrates core SOC capabilities, including threat detection, alerting, incident response, and visualization through workbooks.
 
+## 𝚃𝙰𝙱𝙻𝙴 𝙾𝙵 𝙲𝙾𝙽𝚃𝙴𝙽𝚃𝚂
+
+- [𝚂𝙴𝚃𝚄𝙿 𝙰𝚉𝚄𝚁𝙴 𝚂𝚄𝙱𝚂𝙲𝚁𝙸𝙿𝚃𝙸𝙾𝙽](#setup-azure-subscription)
+- [𝙲𝚁𝙴𝙰𝚃𝙴 𝙰 𝚁𝙴𝚂𝙾𝚄𝚁𝙲𝙴 𝙶𝚁𝙾𝚄𝙿](#create-a-resource-group)
+- [𝙲𝚁𝙴𝙰𝚃𝙴 𝙰 𝚅𝙸𝚁𝚃𝚄𝙰𝙻 𝙽𝙴𝚃𝚆𝙾𝚁𝙺](#create-a-virtual-network)
+- [𝙲𝚁𝙴𝙰𝚃𝙴 𝙰 𝚅𝙸𝚁𝚃𝚄𝙰𝙻 𝙼𝙰𝙲𝙷𝙸𝙽𝙴](#create-a-virtual-machine)
+- [𝙲𝚁𝙴𝙰𝚃𝙴 𝚃𝙷𝙴 𝙷𝙾𝙽𝙴𝚈𝙿𝙾𝚃](#create-the-honeypot)
+- [𝚅𝙰𝙻𝙸𝙳𝙰𝚃𝙴 𝙷𝙾𝙽𝙴𝚈𝙿𝙾𝚃 𝙴𝚇𝙿𝙾𝚂𝚄𝚁𝙴](#validate-honeypot-exposure)
+- [𝙲𝚁𝙴𝙰𝚃𝙴 𝙰 𝙻𝙾𝙶 𝙰𝙽𝙰𝙻𝚈𝚃𝙸𝙲𝚂 𝚆𝙾𝚁𝙺𝚂𝙿𝙰𝙲𝙴](#create-a-log-analytics-workspace)
+- [𝙰𝙲𝚃𝙸𝚅𝙰𝚃𝙴 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝚂𝙴𝙽𝚃𝙸𝙽𝙴𝙻](#activate-microsoft-sentinel)
+- [1 𝙷𝙾𝚄𝚁 𝚁𝙴𝚂𝚄𝙻𝚃𝚂](#1-hour-results)
+- [𝙻𝙾𝙶 𝙴𝙽𝚁𝙸𝙲𝙷𝙼𝙴𝙽𝚃 𝙸𝙽 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝚂𝙴𝙽𝚃𝙸𝙽𝙴𝙻](#log-enrichment-in-microsoft-sentinel)
+- [𝙲𝚁𝙴𝙰𝚃𝙸𝙽𝙶 𝙰 𝙼𝙰𝙿 𝚆𝙾𝚁𝙺𝙱𝙾𝙾𝙺 𝙸𝙽 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝚂𝙴𝙽𝚃𝙸𝙽𝙴𝙻](#creating-a-map-workbook-in-microsoft-sentinel)
+- [24 𝙷𝙾𝚄𝚁 𝚁𝙴𝚂𝚄𝙻𝚃𝚂](#24-hour-results)
+- [𝚃𝙾𝙿 5 𝙲𝙾𝚄𝙽𝚃𝚁𝙸𝙴𝚂](#top-5-countries)
+- [𝚃𝙾𝙿 10 𝙰𝚃𝚃𝙰𝙲𝙺𝙴𝚁 𝙸𝙿 𝙰𝙳𝙳𝚁𝙴𝚂𝚂𝙴𝚂](#top-10-attacker-ip-addresses)
+- [𝙵𝙰𝙸𝙻𝙴𝙳 𝙻𝙾𝙶𝙾𝙽 𝙰𝚃𝚃𝙴𝙼𝙿𝚃𝚂 𝚃𝙸𝙼𝙴𝙻𝙸𝙽𝙴](#failed-logon-attempts-timeline)
+- [𝙲𝚁𝙴𝙰𝚃𝙸𝙽𝙶 𝙰 𝙲𝚄𝚂𝚃𝙾𝙼 𝙳𝙴𝚃𝙴𝙲𝚃𝙸𝙾𝙽 𝚁𝚄𝙻𝙴](#creating-a-custom-detection-rule)
+- [𝙸𝙽𝙲𝙸𝙳𝙴𝙽𝚃 𝚁𝙴𝚂𝙿𝙾𝙽𝚂𝙴 𝙸𝙽 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝚂𝙴𝙽𝚃𝙸𝙽𝙴𝙻](#incident-response-in-microsoft-sentinel)
+- [𝙲𝙻𝙾𝚂𝙸𝙽𝙶 𝙾𝚄𝚃 𝚃𝙷𝙴 𝙸𝙽𝙲𝙸𝙳𝙴𝙽𝚃 𝙽𝚄𝙼𝙱𝙴𝚁 1](#closing-out-the-incident-number-1)
+
 ---
 
 ## 𝚂𝙴𝚃𝚄𝙿 𝙰𝚉𝚄𝚁𝙴 𝚂𝚄𝙱𝚂𝙲𝚁𝙸𝙿𝚃𝙸𝙾𝙽
