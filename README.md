@@ -158,7 +158,7 @@ Diagnostics
 ### Step 1: Go to the `Network Security Group` inside your `Virtual Machine`
 
 ```
-CORP-NET-EAST
+YourVirtualMachine
 └─ Networking
   └─ Network Settings
 ```
@@ -167,6 +167,12 @@ CORP-NET-EAST
 
 ### Step 2: Delete the `RDP` `Inbound Security Rule`
 
+```
+YourVirtualMachine
+└─ Overview
+  └─ Public IP Address
+```
+  
 <img width="2196" height="402" alt="Lab 23" src="https://github.com/user-attachments/assets/7dd7b6d6-ca5d-487c-a7c0-4608d753a10a" />
 
 ---
