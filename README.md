@@ -768,7 +768,7 @@ Add Inbound Security Rule
 
 ---
 
-## 18. 𝙲𝙻𝙾𝚂𝙸𝙽𝙶 𝙾𝚄𝚃 𝚃𝙷𝙴 𝙸𝙽𝙲𝙸𝙳𝙸𝙴𝙽𝚃
+# 18. 𝙲𝙻𝙾𝚂𝙸𝙽𝙶 𝙾𝚄𝚃 𝚃𝙷𝙴 𝙸𝙽𝙲𝙸𝙳𝙸𝙴𝙽𝚃
 
 <img width="543" height="677" alt="Lab 77" src="https://github.com/user-attachments/assets/148e6c09-a7e3-42f7-8a3c-7d74f6d19fea" />
 
