@@ -520,7 +520,7 @@ SecurityEvent
 
 ---
 
-### *Top 5 Countries*
+## 𝚃𝙾𝙿 5 𝙲𝙾𝚄𝙽𝚃𝚁𝙸𝙴𝚂
 
 ```kql
 let GeoIPDB_FULL = _GetWatchlist("geoip");
@@ -548,7 +548,7 @@ WindowsEvents
 
 ---
 
-### *Top 10 Attacker IP Addresses*
+## 𝚃𝙾𝙿 10 𝙰𝚃𝚃𝙰𝙲𝙺𝙴𝚁 𝙸𝙿 𝙰𝙳𝙳𝚁𝙴𝚂𝚂𝙴𝚂
 
 ```kql
 SecurityEvent
@@ -561,7 +561,7 @@ SecurityEvent
 
 ---
 
-### *Failed Logon Attempts Timeline*
+## 𝙵𝙰𝙸𝙻𝙴𝙳 𝙻𝙾𝙶𝙾𝙽 𝙰𝚃𝚃𝙴𝙼𝙿𝚃𝚂 𝚃𝙸𝙼𝙴𝙻𝙸𝙽𝙴
 
 ```kql
 SecurityEvent
