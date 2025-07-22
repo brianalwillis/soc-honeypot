@@ -8,22 +8,22 @@
 
 ## 🛠️ 𝚃𝙴𝙲𝙷𝙽𝙾𝙻𝙾𝙶𝚈 & 𝙿𝙻𝙰𝚃𝙵𝙾𝚁𝙼𝚂 𝚄𝚃𝙸𝙻𝙸𝚉𝙴𝙳
 
-- `Microsoft Azure:`</br>
+- *`Microsoft Azure:`*</br>
   Core cloud platform used to build and host the SOC and honeypot infrastructure.
 
-- `Windows 10 VM:`</br>
+- *`Windows 10 VM:`*</br>
   Deployed as a honeypot to attract and monitor unauthorized access attempts.
 
-- `Network Security Group (NSG) / Firewall:`</br>
+- *`Network Security Group (NSG) / Firewall:`*</br>
   Intentionally configured to allow all inbound traffic to maximize visibility and expose the honeypot VM to real-world attack attempts.
 
-- `Log Analytics Workspace:`</br>
+- *`Log Analytics Workspace:`*</br>
   Centralized log collection hub for ingesting and analyzing event data from the VM and Sentinel.
 
-- `Microsoft Sentinel:`</br>
+- *`Microsoft Sentinel:`*</br>
   Cloud-native SIEM solution used to detect, investigate, and respond to threats in real time.
 
-- `Kusto Query Language (KQL):`</br>
+- *`Kusto Query Language (KQL):`*</br>
   Used to write custom detection rules, analyze login attempts, and visualize attacker behavior in Sentinel dashboards.
 
   ---
