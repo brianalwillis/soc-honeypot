@@ -342,9 +342,28 @@ YourVirtualMachine
     └─ Extensions + Applications
 ```
 
-*Note: This is to check if the `AzureMonitorWindowsAgent` extension is installed. Any logs from the `honeypot` will now be sent to the `Log Analytics Workspace`.*
+*Note: This is to check if the `AzureMonitorWindowsAgent` extension is installed. Any logs from the `honeypot` will now be sent to `Log Analytics Workspace`.*
 
 ---
+
+## 1 𝙷𝙾𝚄𝚁 𝙻𝙰𝚃𝙴𝚁
+
+```kql
+SecurityEvent
+| where EventID == 4625
+| where TimeGenerated between (datetime(2025-07-21T07:46:00Z) .. datetime(2025-07-21T08:46:00Z))
+| project TimeGenerated, Account, Computer, EventID, Activity, IpAddress
+| sort by TimeGenerated asc
+```
+
+### *This KQL query filters for failed logon attempts (`Event ID 4625`) that occurred within a one-hour window from `07:46 to 08:46 UTC` on `July 21, 2025`. It then displays key details like timestamp, account, computer, eventID, activity, and IP address, sorted in chronological order.*
+
+<img width="1047" height="746" alt="image" src="https://github.com/user-attachments/assets/a5ab9372-f4b4-452c-b5ee-63f07a9fa367" />
+
+### *In the first hour after the honeypot VM went live, there were `94` failed login attempts originating from three unique IP addresses: `142.127.226.188`, `91.238.181.94`, and `80.94.95.75`. This early activity confirms that the exposed VM is already attracting external attention.*
+
+---
+
 
 
 
