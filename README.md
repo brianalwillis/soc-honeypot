@@ -55,7 +55,7 @@ The objective of this project was to design and implement a simulated `Security 
 
 ---
 
-## 𝚂𝙴𝚃𝚄𝙿 𝙰𝚉𝚄𝚁𝙴 𝚂𝚄𝙱𝚂𝙲𝚁𝙸𝙿𝚃𝙸𝙾𝙽
+## 1. 𝚂𝙴𝚃𝚄𝙿 𝙰𝚉𝚄𝚁𝙴 𝚂𝚄𝙱𝚂𝙲𝚁𝙸𝙿𝚃𝙸𝙾𝙽
 
 ### Step 1: Create a free Azure subscription: [`https://azure.microsoft.com`](https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account)
 
@@ -69,7 +69,7 @@ The objective of this project was to design and implement a simulated `Security 
 
 ---
 
-## 𝙲𝚁𝙴𝙰𝚃𝙴 𝙰 𝚁𝙴𝚂𝙾𝚄𝚁𝙲𝙴 𝙶𝚁𝙾𝚄𝙿
+## 2. 𝙲𝚁𝙴𝙰𝚃𝙴 𝙰 𝚁𝙴𝚂𝙾𝚄𝚁𝙲𝙴 𝙶𝚁𝙾𝚄𝙿
 
 ### Step 1: Go to `portal.azure.com` and search for `Resource Groups`
 
@@ -90,7 +90,7 @@ Review + Create
 
 ---
 
-## 𝙲𝚁𝙴𝙰𝚃𝙴 𝙰 𝚅𝙸𝚁𝚃𝚄𝙰𝙻 𝙽𝙴𝚃𝚆𝙾𝚁𝙺
+## 3. 𝙲𝚁𝙴𝙰𝚃𝙴 𝙰 𝚅𝙸𝚁𝚃𝚄𝙰𝙻 𝙽𝙴𝚃𝚆𝙾𝚁𝙺
 
 ### Step 1: In Azure Portal, search for `Virtual Network` 
 
@@ -113,7 +113,7 @@ Review + Create
 
 ---
 
-## 𝙲𝚁𝙴𝙰𝚃𝙴 𝙰 𝚅𝙸𝚁𝚃𝚄𝙰𝙻 𝙼𝙰𝙲𝙷𝙸𝙽𝙴
+## 4. 𝙲𝚁𝙴𝙰𝚃𝙴 𝙰 𝚅𝙸𝚁𝚃𝚄𝙰𝙻 𝙼𝙰𝙲𝙷𝙸𝙽𝙴
 
 ### Step 1: In Azure Portal, search for `Virtual Machines`
 
@@ -177,7 +177,7 @@ Review + Create
 
 ---
 
-## 🍯 𝙲𝚁𝙴𝙰𝚃𝙴 𝚃𝙷𝙴 𝙷𝙾𝙽𝙴𝚈𝙿𝙾𝚃
+## 🍯 5. 𝙲𝚁𝙴𝙰𝚃𝙴 𝚃𝙷𝙴 𝙷𝙾𝙽𝙴𝚈𝙿𝙾𝚃
 
 ### Step 1: Go to the `Network Security Group` inside your `Virtual Machine`
 
@@ -237,7 +237,7 @@ Win + R
 
 ---
 
-## 𝚅𝙰𝙻𝙸𝙳𝙰𝚃𝙴 𝙷𝙾𝙽𝙴𝚈𝙿𝙾𝚃 𝙴𝚇𝙿𝙾𝚂𝚄𝚁𝙴
+## 6. 𝚅𝙰𝙻𝙸𝙳𝙰𝚃𝙴 𝙷𝙾𝙽𝙴𝚈𝙿𝙾𝚃 𝙴𝚇𝙿𝙾𝚂𝚄𝚁𝙴
 
 ### Step 1: From your `Local Machine`, ping your `Virtual Machine's` Public IP Address
 
@@ -264,7 +264,7 @@ Win + R
 
 ---
 
-## 𝙲𝚁𝙴𝙰𝚃𝙴 𝙰 𝙻𝙾𝙶 𝙰𝙽𝙰𝙻𝚈𝚃𝙸𝙲𝚂 𝚆𝙾𝚁𝙺𝚂𝙿𝙰𝙲𝙴
+# 7. 𝙲𝚁𝙴𝙰𝚃𝙴 𝙰 𝙻𝙾𝙶 𝙰𝙽𝙰𝙻𝚈𝚃𝙸𝙲𝚂 𝚆𝙾𝚁𝙺𝚂𝙿𝙰𝙲𝙴
 
 ### Step 1: In Azure Portal, search for `Log Analytics Workspaces` 
 
@@ -287,7 +287,7 @@ Review + Create
 
 ---
 
-## 𝙰𝙲𝚃𝙸𝚅𝙰𝚃𝙴 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝚂𝙴𝙽𝚃𝙸𝙽𝙴𝙻
+# 8. 𝙰𝙲𝚃𝙸𝚅𝙰𝚃𝙴 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝚂𝙴𝙽𝚃𝙸𝙽𝙴𝙻
 
 ### Step 1: In Azure Portal, search for `Microsoft Sentinel` 
 
@@ -367,7 +367,7 @@ YourVirtualMachine
 
 ---
 
-# 1 𝙷𝙾𝚄𝚁 𝚁𝙴𝚂𝚄𝙻𝚃𝚂
+# 9. 1 𝙷𝙾𝚄𝚁 𝚁𝙴𝚂𝚄𝙻𝚃𝚂
 
 ### *This KQL query filters for failed logon attempts (`Event ID 4625`) that occurred within a one-hour window from `07:46 to 08:46 UTC` on `July 21, 2025`. It then displays key details like timestamp, account, computer, eventID, activity, and IP address, sorted in chronological order.*
 
@@ -384,7 +384,7 @@ SecurityEvent
 
 ---
 
-# 𝙻𝙾𝙶 𝙴𝙽𝚁𝙸𝙲𝙷𝙼𝙴𝙽𝚃 𝙸𝙽 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝚂𝙴𝙽𝚃𝙸𝙽𝙴𝙻
+# 10. 𝙻𝙾𝙶 𝙴𝙽𝚁𝙸𝙲𝙷𝙼𝙴𝙽𝚃 𝙸𝙽 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝚂𝙴𝙽𝚃𝙸𝙽𝙴𝙻
 
 ### Step 1: In Azure Portal, search for `Microsoft Sentinel` 
 
@@ -441,7 +441,7 @@ WindowsEvents
 
 ---
 
-# 𝙲𝚁𝙴𝙰𝚃𝙸𝙽𝙶 𝙰 𝙼𝙰𝙿 𝚆𝙾𝚁𝙺𝙱𝙾𝙾𝙺 𝙸𝙽 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝚂𝙴𝙽𝚃𝙸𝙽𝙴𝙻
+# 11. 𝙲𝚁𝙴𝙰𝚃𝙸𝙽𝙶 𝙰 𝙼𝙰𝙿 𝚆𝙾𝚁𝙺𝙱𝙾𝙾𝙺 𝙸𝙽 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝚂𝙴𝙽𝚃𝙸𝙽𝙴𝙻
 
 ### Step 1: In Azure Portal, search for `Microsoft Sentinel` 
 
@@ -525,7 +525,7 @@ friendly_location = strcat(cityname, " (", countryname, ")");
 
 ---
 
-# 24 𝙷𝙾𝚄𝚁 𝚁𝙴𝚂𝚄𝙻𝚃𝚂
+# 12. 24 𝙷𝙾𝚄𝚁 𝚁𝙴𝚂𝚄𝙻𝚃𝚂
 
 ### *This KQL query filters for failed login attempts (`Event ID 4625`) targeting the `honeypot VM` over a `24-hour` period starting on `July 21, 2025`, at `07:46 UTC`. Surprisingly, the results revealed `107,836` failed logon attempts!*
 
@@ -541,7 +541,7 @@ SecurityEvent
 
 ---
 
-## 𝚃𝙾𝙿 5 𝙲𝙾𝚄𝙽𝚃𝚁𝙸𝙴𝚂
+# 13. 𝚃𝙾𝙿 5 𝙲𝙾𝚄𝙽𝚃𝚁𝙸𝙴𝚂
 
 ```kql
 let GeoIPDB_FULL = _GetWatchlist("geoip");
@@ -569,7 +569,7 @@ WindowsEvents
 
 ---
 
-## 𝚃𝙾𝙿 10 𝙰𝚃𝚃𝙰𝙲𝙺𝙴𝚁 𝙸𝙿 𝙰𝙳𝙳𝚁𝙴𝚂𝚂𝙴𝚂
+# 14. 𝚃𝙾𝙿 10 𝙰𝚃𝚃𝙰𝙲𝙺𝙴𝚁 𝙸𝙿 𝙰𝙳𝙳𝚁𝙴𝚂𝚂𝙴𝚂
 
 ```kql
 SecurityEvent
@@ -582,7 +582,7 @@ SecurityEvent
 
 ---
 
-## 𝙵𝙰𝙸𝙻𝙴𝙳 𝙻𝙾𝙶𝙾𝙽 𝙰𝚃𝚃𝙴𝙼𝙿𝚃𝚂 𝚃𝙸𝙼𝙴𝙻𝙸𝙽𝙴
+# 15. 𝙵𝙰𝙸𝙻𝙴𝙳 𝙻𝙾𝙶𝙾𝙽 𝙰𝚃𝚃𝙴𝙼𝙿𝚃𝚂 𝚃𝙸𝙼𝙴𝙻𝙸𝙽𝙴
 
 ```kql
 SecurityEvent
@@ -597,7 +597,7 @@ SecurityEvent
 
 ---
 
-# 𝙲𝚁𝙴𝙰𝚃𝙸𝙽𝙶 𝙰 𝙲𝚄𝚂𝚃𝙾𝙼 𝙳𝙴𝚃𝙴𝙲𝚃𝙸𝙾𝙽 𝚁𝚄𝙻𝙴
+# 16. 𝙲𝚁𝙴𝙰𝚃𝙸𝙽𝙶 𝙰 𝙲𝚄𝚂𝚃𝙾𝙼 𝙳𝙴𝚃𝙴𝙲𝚃𝙸𝙾𝙽 𝚁𝚄𝙻𝙴
 
 ### Step 1: In Azure Portal, search for `Microsoft Sentinel`
 
@@ -668,7 +668,7 @@ Review + Create
 
 ---
 
-# 𝙸𝙽𝙲𝙸𝙳𝙴𝙽𝚃 𝚁𝙴𝚂𝙿𝙾𝙽𝚂𝙴 𝙸𝙽 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝚂𝙴𝙽𝚃𝙸𝙽𝙴𝙻
+# 17. 𝙸𝙽𝙲𝙸𝙳𝙴𝙽𝚃 𝚁𝙴𝚂𝙿𝙾𝙽𝚂𝙴 𝙸𝙽 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝚂𝙴𝙽𝚃𝙸𝙽𝙴𝙻
 
 ### Step 1: In Azure Portal, search for `Microsoft Sentinel`
 
@@ -768,7 +768,7 @@ Add Inbound Security Rule
 
 ---
 
-## 𝙲𝙻𝙾𝚂𝙸𝙽𝙶 𝙾𝚄𝚃 𝚃𝙷𝙴 𝙸𝙽𝙲𝙸𝙳𝙸𝙴𝙽𝚃 𝙽𝚄𝙼𝙱𝙴𝚁 1
+## 18. 𝙲𝙻𝙾𝚂𝙸𝙽𝙶 𝙾𝚄𝚃 𝚃𝙷𝙴 𝙸𝙽𝙲𝙸𝙳𝙸𝙴𝙽𝚃 𝙽𝚄𝙼𝙱𝙴𝚁 1
 
 <img width="543" height="677" alt="Lab 77" src="https://github.com/user-attachments/assets/148e6c09-a7e3-42f7-8a3c-7d74f6d19fea" />
 
