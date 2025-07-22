@@ -272,11 +272,15 @@ Review + Create
 
 <img width="626" height="279" alt="Extra 1" src="https://github.com/user-attachments/assets/0ff5da10-d4bc-499c-b1d2-f903af0417a4" />
 
+---
+
 ### Step 2: Select Your `Log Analytics Workspace` and `Add`
 
 <img width="1173" height="124" alt="Lab 7" src="https://github.com/user-attachments/assets/e41d901e-57a8-4bfa-8406-a226fb2f9faa" />
 
-### Step 3: In Microsoft Sentinel, Install Windows Security Events  
+---
+
+### Step 3: In `Microsoft Sentinel`, Install `Windows Security Events`  
 
 ```
 Content Management
@@ -285,6 +289,68 @@ Search: Security Event
   └─ ☑ Windows Security Events
     └─ Install
 ```
+
+<img width="1634" height="984" alt="Lab 11" src="https://github.com/user-attachments/assets/763c4d83-7054-4995-9816-1663209543b5" />
+
+---
+
+### Step 4: Once installed, check `Windows Security Events` and click `Manage`
+
+```
+Windows Security Events
+  └─ ☑ Windows Security Events via AMA
+  └─ Open Connector Page
+```
+
+---
+
+### Step 5: Create a `Data Collection Rule`
+
+```
+Basic
+
+Rule Details
+  └─ Rule Name: DC-willis
+  └─ Subscription: Azure Subscription 1
+  └─ Resource Group: RG-willis
+```
+
+```
+Resources
+
+Source
+  └─ ☑ Azure Subscription 1
+  └─ ☑ RG-willis
+  └─ ☑ YourVictualMachine
+```
+
+```
+Collect
+  └─ All Security Events
+```
+
+```
+Review + Create
+  └─ Create (When Prompted)
+```
+
+- ### Open a second tab, go to `portal.azure.com` and search for `Virtual Machines`
+
+```
+YourVirtualMachine
+  └─ Settings
+    └─ Extensions + Applications
+```
+
+*Note: This is to check if your `AzureMonitorWindowsAgent` is installed.*
+
+---
+
+
+
+
+
+
 
 
 
