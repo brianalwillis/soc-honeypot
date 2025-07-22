@@ -649,6 +649,125 @@ Review + Create
 
 # 𝙸𝙽𝙲𝙸𝙳𝙴𝙽𝚃 𝚁𝙴𝚂𝙿𝙾𝙽𝚂𝙴 𝙸𝙽 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝚂𝙴𝙽𝚃𝙸𝙽𝙴𝙻
 
+### Step 1: In Azure Portal, search for `Microsoft Sentinel`
+
+---
+
+### Step 2: Investigate `Incidents` triggered by `Analytics Rule`
+
+```
+Microsoft Sentinel
+  └─ Threat Management
+    └─ Incident
+```
+
+<img width="575" height="742" alt="Extra 12" src="https://github.com/user-attachments/assets/5b066cfa-d2c0-467c-ad06-53c85c0525e1" />
+
+---
+
+### *An account named `\EAST` from IP address `80.94.95.43` attempted to log in to the computer `CORP-NET-EAST` `10,470` times, indicating a `brute-force` attempt.*
+
+<img width="828" height="456" alt="Lab 70" src="https://github.com/user-attachments/assets/5c0e0b3e-b132-4c3b-a32e-5ad81f392c78" />
+
+---
+
+### *Further investigation revealed that the IP address originates from `Maarn, Netherlands`, with coordinates approximately at `latitude 52.0672` and `longitude 5.3781`.*
+
+```kql
+let GeoIPDB_FULL = _GetWatchlist("geoip");
+let WindowsEvents = SecurityEvent
+    | where IpAddress == "80.94.95.43"
+    | where EventID == 4625
+    | order by TimeGenerated desc;
+WindowsEvents
+| evaluate ipv4_lookup(GeoIPDB_FULL, IpAddress, network)
+| project TimeGenerated, Computer, AttackerIp = IpAddress, cityname, countryname, latitude, longitude
+```
+
+<img width="972" height="188" alt="Extra 15" src="https://github.com/user-attachments/assets/5cd10d8a-6eb9-4358-877b-c044ed60acfa" />
+
+---
+
+### *This IP address has been reported `43` times and flagged as malicious by several reputable security vendors, including `AlphaMountain.ai`, `CyRadar`, and `Fortinet`.*
+
+<img width="1308" height="523" alt="Extra 13" src="https://github.com/user-attachments/assets/604a4cd9-c7d6-4d7e-9986-ac1c91e2f517" /></br>
+
+<img width="502" height="494" alt="Extra 14" src="https://github.com/user-attachments/assets/0fe2b512-1039-47bd-b3f2-361d204d2734" />
+
+---
+
+### *The IP address `80.94.95.43` has not recorded any successful login attempts (`Event ID: 4624`), confirming that the computer `CORP-NET-EAST` remains uncompromised.*
+
+```kql
+let GeoIPDB_FULL = _GetWatchlist("geoip");
+let WindowsEvents = SecurityEvent
+    | where IpAddress == "80.94.95.43"
+    | where EventID == 4624
+    | order by TimeGenerated desc;
+WindowsEvents
+| evaluate ipv4_lookup(GeoIPDB_FULL, IpAddress, network)
+| project TimeGenerated, Computer, AttackerIp = IpAddress, cityname, countryname, latitude, longitude
+```
+
+<img width="363" height="97" alt="Extra 16" src="https://github.com/user-attachments/assets/c1f5eb42-6884-4756-95b1-360588270cf3" />
+
+---
+
+### Step 3: Block Malicious IP Address
+
+- ### Search for `Virtual Machines`
+
+```
+YourVirtualMachine
+  └─ Networking
+    └─ Networking Settings
+```
+
+### `+ Add` a new `Inbound Security Rule`
+
+```
+Add Inbound Security Rule
+  └─ Source: IP Addresses
+  └─ Source IP Addresses/CIDR Ranges: 80.94.95.0/24
+  └─ Source Port Ranges: *
+  └─ Destination: Any
+  └─ Service: Custom
+  └─ Destination Port Ranges: *
+  └─ Protocol: Any
+  └─ Action: Deny
+  └─ Priority: 100
+  └─ Name: Deny--80.94.95.0-24
+```
+
+The CIDR block `80.94.95.0/24` effectively covers all IP addresses from `80.94.95.0` to `80.94.95.255`. Implementing this as an `NSG` rule successfully blocked `80.94.95.43` and any other IPs within the `80.94.95.*` range from attempting to access the honeypot.
+
+---
+
+## 𝙲𝙻𝙾𝚂𝙸𝙽𝙶 𝙾𝚄𝚃 𝚃𝙷𝙴 𝙸𝙽𝙲𝙸𝙳𝙸𝙴𝙽𝚃 𝙽𝚄𝙼𝙱𝙴𝚁 1
+
+<img width="543" height="677" alt="Lab 77" src="https://github.com/user-attachments/assets/148e6c09-a7e3-42f7-8a3c-7d74f6d19fea" />
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
