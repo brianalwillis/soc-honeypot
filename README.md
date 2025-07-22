@@ -407,15 +407,9 @@ Microsoft Sentinel
 General
   └─ Name: geoip
   └─ Alias: geoip
-```
-
-```
 Source
   └─ Browse for Files: geoip-summarized (Excel Spreadsheet)
   └─ SearchKey: Network
-```
-
-```
 Review + Create
   └─ Create (When Prompted)
 ```
