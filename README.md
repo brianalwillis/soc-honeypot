@@ -589,6 +589,8 @@ SecurityEvent
 
 <img width="1951" height="735" alt="Extra 11" src="https://github.com/user-attachments/assets/50138024-90df-48dc-82f5-e0c515d97f28" />
 
+### *The timeline illustrates the volume of failed login attempts over time, totaling `117,000`, with several notable spikes. `17,000 at 8 AM`, `8,930 at 9 AM`, and a staggering `70,400 at 8 PM`!*
+
 ---
 
 # 16. 𝙲𝚁𝙴𝙰𝚃𝙸𝙽𝙶 𝙰 𝙲𝚄𝚂𝚃𝙾𝙼 𝙳𝙴𝚃𝙴𝙲𝚃𝙸𝙾𝙽 𝚁𝚄𝙻𝙴
