@@ -574,6 +574,83 @@ SecurityEvent
 
 <img width="1951" height="735" alt="Extra 11" src="https://github.com/user-attachments/assets/50138024-90df-48dc-82f5-e0c515d97f28" />
 
+---
+
+# 𝙲𝚁𝙴𝙰𝚃𝙸𝙽𝙶 𝙰 𝙲𝚄𝚂𝚃𝙾𝙼 𝙳𝙴𝚃𝙴𝙲𝚃𝙸𝙾𝙽 𝚁𝚄𝙻𝙴
+
+### Step 1: In Azure Portal, search for `Microsoft Sentinel`
+
+---
+
+### Step 2: Add an `Analytics Rule`, in `Microsoft Sentinel`
+
+```
+Microsoft Sentinel
+  └─ Configuration
+    └─ Analytics
+      └─ + Create
+```
+
+### Step 3: Create a new `Scheduled Rule`
+
+```
+Analytics Rule Details
+  └─ Name: Failed Logon Attempts
+  └─ Description: This rule detects Windows logon failures on CORP-NET-EAST
+  └─ Severity: Medium
+  └─ MITRE ATT&CK
+    └─ Credential Access
+       └─ T1110 - Brute Force
+    └─ Initial Access
+       └─ T1078 - Valid Accounts
+    └─ Reconnaissance
+       └─ T1589 - Gather Identity Information
+          └─ T1589.001 - Credentials
+  └─ Status: Enabled
+```
+
+```kql
+SecurityEvent
+| where EventID == 4625
+| where computer == "CORP-NET-EAST"
+| summarize AttemptCount = count() by IpAddress, Account, Computer, bin(TimeGenerated, 5m)
+| where AttemptCount > 3
+```
+
+```
+Alert Enhancement
+  └─ Account
+    └─ Name - Account
+  └─ Host
+    └─ HostName - Computer
+  └─ IP
+    └─ Address - IpAddress
+```
+
+```
+Query Scheduling
+  └─ Run Query Every: 5 Minutes
+  └─ Lookup Data: 5 Minutes
+  └─ Start Running: Automatically
+Alert Threshold
+  └─ Generate Alert When Number of Query Results: Is Greater Than 0
+Event Grouping
+  └─ Group all events into a single alert
+Suppression
+  └─ Stop running query after alert is generated: On
+  └─ Stop running query for: 24 Hours
+Review + Create
+  └─ Create (When Prompted)
+```
+
+<img width="1963" height="587" alt="Lab 65" src="https://github.com/user-attachments/assets/2320310c-5d60-4bd6-a0a7-a63262ae7f37" />
+
+---
+
+## 𝙸𝙽𝙲𝙸𝙳𝙴𝙽𝚃 𝚁𝙴𝚂𝙿𝙾𝙽𝚂𝙴 𝙸𝙽 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝚂𝙴𝙽𝚃𝙸𝙽𝙴𝙻
+
+
+
 
 
 
