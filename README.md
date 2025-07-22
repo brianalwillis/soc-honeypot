@@ -34,7 +34,35 @@ The objective of this project was to design and implement a simulated `Security 
 
 ---
 
-## SETUP AZURE SUBSCRIPTION
+## 𝚂𝙴𝚃𝚄𝙿 𝙰𝚉𝚄𝚁𝙴 𝚂𝚄𝙱𝚂𝙲𝚁𝙸𝙿𝚃𝙸𝙾𝙽
 
 ### Step 1: Create a free Azure subscription: [`https://azure.microsoft.com`](https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account)
+
+<img width="1594" height="677" alt="Lab 1" src="https://github.com/user-attachments/assets/943202f4-4ee4-4bdc-817c-5071ae21f0e5" /></br>
+
+<img width="1314" height="488" alt="Lab 2" src="https://github.com/user-attachments/assets/e2857ac0-8dcd-4699-b139-2181c4e4859d" /></br>
+
+*Note: You will have to sign up and provide valid payment information, but you will **NOT** be charged.*
+
+### Step 2: After your subscription is created, you can log in at: [`https://portal.azure.com`](https://portal.azure.com)
+
+---
+
+## 𝙲𝚁𝙴𝙰𝚃𝙴 𝚃𝙷𝙴 𝙷𝙾𝙽𝙴𝚈𝙿𝙾𝚃
+
+### Step 1: Go to `portal.azure.com` and search for `virtual machines`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
