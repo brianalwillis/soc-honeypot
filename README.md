@@ -751,15 +751,8 @@ Add Inbound Security Rule
 
 ---
 
+*Thank you for reading this far! Here’s a quick recap: I deployed a `honeypot` in `Microsoft Azure` by intentionally exposing it to the public internet. To simulate a `Security Operations Center` (SOC), I created a `Log Analytics Workspace` and integrated it with `Microsoft Sentinel` to collect and analyze logs from the honeypot. Over a `24-hour` period, I monitored failed logon attempts—tracking the total volume, identifying the top five source countries and top ten attacking IP addresses, and visualizing the activity over time. I then created a custom detection rule and responded to a confirmed brute-force attack incident.*
 
-
-
-
-
-
-
-
-
-
-
-
+**Created By:** `Briana Willis`  
+**Date:** `2025-07-2`  
+**Time:** `19:21 UTC`
