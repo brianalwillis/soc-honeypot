@@ -342,9 +342,10 @@ YourVirtualMachine
     └─ Extensions + Applications
 ```
 
-*Note: This is to check if your `AzureMonitorWindowsAgent` is installed. Any logs from the `honeypot` will be sent to the `Log Analytics Workspace`.*
+*Note: This is to check if the `AzureMonitorWindowsAgent` extension is installed. Any logs from the `honeypot` will now be sent to the `Log Analytics Workspace`.*
 
 ---
+
 
 
 
