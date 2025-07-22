@@ -119,7 +119,7 @@ Review + Create
 
 <img width="626" height="279" alt="Extra 1" src="https://github.com/user-attachments/assets/1b5184f5-0b63-47e0-bb00-bad092289d57" />
 
-### Step 2: `+ Create` a new `virtual machine`
+### Step 2: `+ Create` a new `Virtual Machine`
 
 <img width="433" height="599" alt="Extra 2" src="https://github.com/user-attachments/assets/f3e8dc4d-470a-4d60-9012-ee34b574ed68" />
 
