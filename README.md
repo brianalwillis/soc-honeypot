@@ -363,6 +363,48 @@ SecurityEvent
 
 ---
 
+## 𝙻𝙾𝙶 𝙴𝙽𝚁𝙸𝙲𝙷𝙼𝙴𝙽𝚃 𝙸𝙽 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝚂𝙴𝙽𝚃𝙸𝙽𝙴𝙻
+
+### Step 1: In Azure Portal, search for `Microsoft Sentinel` 
+
+---
+
+### Step 2: In `Microsoft Sentinel`, select the `Log Analytics Workspace` 
+
+```
+Microsoft Sentinel
+  └─ Configuration
+    └─ Watchlist
+      └─ + New
+```
+
+---
+
+### Step 3: Create a `Watchlist`
+
+```
+General
+  └─ Name: geoip
+  └─ Alias: geoip
+```
+
+```
+Source
+  └─ Browse for Files: geoip-summarized (Excel Spreadsheet)
+  └─ SearchKey: Network
+```
+
+```
+Review + Create
+  └─ Create (When Prompted)
+```
+
+<img width="784" height="364" alt="Lab 51" src="https://github.com/user-attachments/assets/45e08b88-0185-4323-a390-fe52dd31dc62" />
+
+---
+
+
+
 
 
 
