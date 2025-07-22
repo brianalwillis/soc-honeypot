@@ -346,7 +346,7 @@ YourVirtualMachine
 
 ---
 
-## 1 𝙷𝙾𝚄𝚁 𝚁𝙴𝚂𝚄𝙻𝚃𝚂
+# 1 𝙷𝙾𝚄𝚁 𝚁𝙴𝚂𝚄𝙻𝚃𝚂
 
 ### *This KQL query filters for failed logon attempts (`Event ID 4625`) that occurred within a one-hour window from `07:46 to 08:46 UTC` on `July 21, 2025`. It then displays key details like timestamp, account, computer, eventID, activity, and IP address, sorted in chronological order.*
 
@@ -363,7 +363,7 @@ SecurityEvent
 
 ---
 
-## 𝙻𝙾𝙶 𝙴𝙽𝚁𝙸𝙲𝙷𝙼𝙴𝙽𝚃 𝙸𝙽 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝚂𝙴𝙽𝚃𝙸𝙽𝙴𝙻
+# 𝙻𝙾𝙶 𝙴𝙽𝚁𝙸𝙲𝙷𝙼𝙴𝙽𝚃 𝙸𝙽 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝚂𝙴𝙽𝚃𝙸𝙽𝙴𝙻
 
 ### Step 1: In Azure Portal, search for `Microsoft Sentinel` 
 
@@ -420,7 +420,7 @@ WindowsEvents
 
 ---
 
-## 𝙲𝚁𝙴𝙰𝚃𝙸𝙽𝙶 𝙰 𝙼𝙰𝙿 𝚆𝙾𝚁𝙺𝙱𝙾𝙾𝙺 𝙸𝙽 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝚂𝙴𝙽𝚃𝙸𝙽𝙴𝙻
+# 𝙲𝚁𝙴𝙰𝚃𝙸𝙽𝙶 𝙰 𝙼𝙰𝙿 𝚆𝙾𝚁𝙺𝙱𝙾𝙾𝙺 𝙸𝙽 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝚂𝙴𝙽𝚃𝙸𝙽𝙴𝙻
 
 ### Step 1: In Azure Portal, search for `Microsoft Sentinel` 
 
@@ -504,7 +504,7 @@ friendly_location = strcat(cityname, " (", countryname, ")");
 
 ---
 
-## 24 𝙷𝙾𝚄𝚁 𝚁𝙴𝚂𝚄𝙻𝚃𝚂
+# 24 𝙷𝙾𝚄𝚁 𝚁𝙴𝚂𝚄𝙻𝚃𝚂
 
 ### *This KQL query filters for failed login attempts (`Event ID 4625`) targeting the `honeypot VM` over a `24-hour` period starting on `July 21, 2025`, at `07:46 UTC`. Surprisingly, the results revealed `107,836` failed logon attempts!*
 
@@ -647,7 +647,9 @@ Review + Create
 
 ---
 
-## 𝙸𝙽𝙲𝙸𝙳𝙴𝙽𝚃 𝚁𝙴𝚂𝙿𝙾𝙽𝚂𝙴 𝙸𝙽 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝚂𝙴𝙽𝚃𝙸𝙽𝙴𝙻
+# 𝙸𝙽𝙲𝙸𝙳𝙴𝙽𝚃 𝚁𝙴𝚂𝙿𝙾𝙽𝚂𝙴 𝙸𝙽 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝚂𝙴𝙽𝚃𝙸𝙽𝙴𝙻
+
+
 
 
 
