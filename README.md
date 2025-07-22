@@ -346,7 +346,7 @@ YourVirtualMachine
 
 ---
 
-## 1 𝙷𝙾𝚄𝚁 𝙻𝙰𝚃𝙴𝚁
+## 1 𝙷𝙾𝚄𝚁 𝚁𝙴𝚂𝚄𝙻𝚃𝚂
 
 ### *This KQL query filters for failed logon attempts (`Event ID 4625`) that occurred within a one-hour window from `07:46 to 08:46 UTC` on `July 21, 2025`. It then displays key details like timestamp, account, computer, eventID, activity, and IP address, sorted in chronological order.*
 
@@ -498,7 +498,81 @@ WindowsEvents | where EventID == 4625
 friendly_location = strcat(cityname, " (", countryname, ")");
 ```
 
-<img width="1145" height="603" alt="Lab 56" src="https://github.com/user-attachments/assets/ef0ca5ef-7add-4057-960e-c610299ac87c" />
+<img width="1145" height="603" alt="Lab 56" src="https://github.com/user-attachments/assets/ef0ca5ef-7add-4057-960e-c610299ac87c" /></br>
+
+### *The map workbook has been created! I named this workbook `Windows VM Attack Map` and saved it to my resource group for future observations.* 
+
+---
+
+## 24 𝙷𝙾𝚄𝚁 𝚁𝙴𝚂𝚄𝙻𝚃𝚂
+
+### *This KQL query filters for failed login attempts (`Event ID 4625`) targeting the `honeypot VM` over a `24-hour` period starting on `July 21, 2025`, at `07:46 UTC`. Surprisingly, the results revealed `107,836` failed logon attempts!*
+
+```kql
+SecurityEvent
+| where EventID == 4625
+| where TimeGenerated between (datetime(2025-07-21T07:46:00Z) .. datetime(2025-07-22T07:46:00Z))
+| project TimeGenerated, Account, Computer, EventID, Activity, IpAddress
+| count
+```
+
+<img width="1936" height="837" alt="Lab 11" src="https://github.com/user-attachments/assets/412ec00c-824c-4a4f-8d10-ae2ad22e8469" />
+
+---
+
+### *Top 5 Countries*
+
+```kql
+let GeoIPDB_FULL = _GetWatchlist("geoip");
+let WindowsEvents = SecurityEvent
+| where EventID == 4625
+| evaluate ipv4_lookup(GeoIPDB_FULL, IpAddress, network)
+| where isnotempty(countryname);
+let Top5Countries = 
+    WindowsEvents
+    | summarize FailureCount = count() by countryname
+    | top 5 by FailureCount desc
+    | project countryname;
+WindowsEvents
+| where countryname in (Top5Countries)
+| summarize FailureCount = count(),
+          latitude = any(latitude),
+          longitude = any(longitude),
+          city = any(cityname)
+    by countryname
+| extend friendly_location = strcat(city, " (", countryname, ")")
+| project countryname, FailureCount, latitude, longitude, friendly_location
+```
+
+<img width="1571" height="829" alt="Extra 7" src="https://github.com/user-attachments/assets/44226dea-0a42-4563-926e-5b7fbf632376" />
+
+---
+
+### *Top 10 Attacker IP Addresses*
+
+```kql
+SecurityEvent
+| where EventID == 4625
+| summarize FailedAttempts = count() by AttackerIp = IpAddress
+| sort by FailedAttempts desc
+```
+
+<img width="364" height="424" alt="Extra 8" src="https://github.com/user-attachments/assets/321bb612-079a-46da-90d3-887b46d48414" />
+
+---
+
+### *Failed Logon Attempts Timeline*
+
+```kql
+SecurityEvent
+| where EventID == 4625
+| summarize FailedAttempts = count() by bin(TimeGenerated, 1h)
+| render columnchart
+```
+
+<img width="1951" height="739" alt="Extra 10" src="https://github.com/user-attachments/assets/195ef539-1f7e-4bb9-8289-170fd21db8ec" />
+
+<img width="1951" height="735" alt="Extra 11" src="https://github.com/user-attachments/assets/50138024-90df-48dc-82f5-e0c515d97f28" />
 
 
 
