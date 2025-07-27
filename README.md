@@ -1,4 +1,4 @@
-<h1 = align=center>𝙸𝙼𝙿𝙻𝙴𝙼𝙴𝙽𝚃𝙸𝙽𝙶 𝙰 𝚂𝙴𝙲𝚄𝚁𝙸𝚃𝚈 𝙾𝙿𝙴𝚁𝙰𝚃𝙸𝙾𝙽 𝙲𝙴𝙽𝚃𝙴𝚁 (𝚂𝙾𝙲)
+<h1 = align=center>𝙸𝙼𝙿𝙻𝙴𝙼𝙴𝙽𝚃𝙸𝙽𝙶 𝙰 𝚂𝙴𝙲𝚄𝚁𝙸𝚃𝚈 𝙾𝙿𝙴𝚁𝙰𝚃𝙸𝙾𝙽 𝙲𝙴𝙽𝚃𝙴𝚁
   
   𝙰𝙽𝙳 𝙷𝙾𝙽𝙴𝚈𝙿𝙾𝚃 𝙸𝙽 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝙰𝚉𝚄𝚁𝙴</h1>
 
@@ -6,7 +6,7 @@
 <img width="1548" height="748" alt="SOC Final drawio (1)" src="https://github.com/user-attachments/assets/aadd2f1a-4ab0-4cac-8c85-c942e5c91702" />
 </p>
 
-## 🛠️ 𝚃𝙴𝙲𝙷𝙽𝙾𝙻𝙾𝙶𝚈 & 𝙿𝙻𝙰𝚃𝙵𝙾𝚁𝙼𝚂 𝚄𝚃𝙸𝙻𝙸𝚉𝙴𝙳
+## 🛠️ TECHNOLOGY & PLATFORMS UTILIZED
 
 - *`Microsoft Azure:`*</br>
   Core cloud platform used to build and host the SOC and honeypot infrastructure.
@@ -28,11 +28,11 @@
 
   ---
 
-## 🎯 𝙾𝙱𝙹𝙴𝙲𝚃𝙸𝚅𝙴
+## 🎯 OBJECTIVE
 
 The objective of this project was to design and implement a simulated `Security Operations Center` (SOC) environment in `Microsoft Azure`, centered around a `Windows 10` virtual machine acting as a `honeypot`. The goal was to attract and analyze real-world unauthorized access attempts by exposing the VM to public traffic. Using tools such as `Microsoft Sentinel`, `Log Analytics Workspace`, and `Kusto Query Language` (KQL), I monitored, detected, and investigated threat activity. This project demonstrates core SOC capabilities, including threat detection, alerting, incident response, and visualization through workbooks.
 
-## 📜 𝚃𝙰𝙱𝙻𝙴 𝙾𝙵 𝙲𝙾𝙽𝚃𝙴𝙽𝚃𝚂
+## 📜 TABLE OF CONTENTS
 
 - `1. SETUP AZURE SUBSCRIPTION`
 - `2. CREATE A RESOURCE GROUP`
@@ -55,7 +55,7 @@ The objective of this project was to design and implement a simulated `Security 
 
 ---
 
-# 1. 𝚂𝙴𝚃𝚄𝙿 𝙰𝚉𝚄𝚁𝙴 𝚂𝚄𝙱𝚂𝙲𝚁𝙸𝙿𝚃𝙸𝙾𝙽
+# 1. SETUP `AZURE SUBSCRIPTION`
 
 ### Step 1: Create a free Azure subscription: [`https://azure.microsoft.com`](https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account)
 
@@ -69,7 +69,7 @@ The objective of this project was to design and implement a simulated `Security 
 
 ---
 
-# 2. 𝙲𝚁𝙴𝙰𝚃𝙴 𝙰 𝚁𝙴𝚂𝙾𝚄𝚁𝙲𝙴 𝙶𝚁𝙾𝚄𝙿
+# 2. CREATE A `RESOURCE GROUP`
 
 ### Step 1: Go to `portal.azure.com` and search for `Resource Groups`
 
@@ -90,7 +90,7 @@ Review + Create
 
 ---
 
-# 3. 𝙲𝚁𝙴𝙰𝚃𝙴 𝙰 𝚅𝙸𝚁𝚃𝚄𝙰𝙻 𝙽𝙴𝚃𝚆𝙾𝚁𝙺
+# 3. CREATE A `VIRTUAL NETWORK`
 
 ### Step 1: In Azure Portal, search for `Virtual Network` 
 
@@ -113,7 +113,7 @@ Review + Create
 
 ---
 
-# 4. 𝙲𝚁𝙴𝙰𝚃𝙴 𝙰 𝚅𝙸𝚁𝚃𝚄𝙰𝙻 𝙼𝙰𝙲𝙷𝙸𝙽𝙴
+# 4. CREATE A `VIRTUAL MACHINE`
 
 ### Step 1: In Azure Portal, search for `Virtual Machines`
 
@@ -177,7 +177,7 @@ Review + Create
 
 ---
 
-# 🍯 5. 𝙲𝚁𝙴𝙰𝚃𝙴 𝚃𝙷𝙴 𝙷𝙾𝙽𝙴𝚈𝙿𝙾𝚃
+# 5. CREATE A `HONEYPOT`
 
 ### Step 1: Go to the `Network Security Group` inside your `Virtual Machine`
 
@@ -237,7 +237,7 @@ Win + R
 
 ---
 
-# 6. 𝚅𝙰𝙻𝙸𝙳𝙰𝚃𝙴 𝙷𝙾𝙽𝙴𝚈𝙿𝙾𝚃 𝙴𝚇𝙿𝙾𝚂𝚄𝚁𝙴
+# 6. `VALIDATE HONEYPOT EXPOSURE`
 
 ### Step 1: From your `Local Machine`, ping your `Virtual Machine's` Public IP Address
 
@@ -264,7 +264,7 @@ Win + R
 
 ---
 
-# 7. 𝙲𝚁𝙴𝙰𝚃𝙴 𝙰 𝙻𝙾𝙶 𝙰𝙽𝙰𝙻𝚈𝚃𝙸𝙲𝚂 𝚆𝙾𝚁𝙺𝚂𝙿𝙰𝙲𝙴
+# 7. CREATE A `LOG ANALYTICS WORKSPACE`
 
 ### Step 1: In Azure Portal, search for `Log Analytics Workspaces` 
 
@@ -287,7 +287,7 @@ Review + Create
 
 ---
 
-# 8. 𝙰𝙲𝚃𝙸𝚅𝙰𝚃𝙴 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝚂𝙴𝙽𝚃𝙸𝙽𝙴𝙻
+# 8. ACTIVATE `MICROSOFT SENTINEL`
 
 ### Step 1: In Azure Portal, search for `Microsoft Sentinel` 
 
@@ -367,7 +367,7 @@ YourVirtualMachine
 
 ---
 
-# 9. 1 𝙷𝙾𝚄𝚁 𝚁𝙴𝚂𝚄𝙻𝚃𝚂
+# 9. `1-HOUR` RESULTS
 
 ### *This KQL query filters for failed logon attempts (`Event ID 4625`) that occurred within a one-hour window from `07:46 to 08:46 UTC` on `July 21, 2025`. It then displays key details like timestamp, account, computer, eventID, activity, and IP address, sorted in chronological order.*
 
@@ -384,7 +384,7 @@ SecurityEvent
 
 ---
 
-# 10. 𝙻𝙾𝙶 𝙴𝙽𝚁𝙸𝙲𝙷𝙼𝙴𝙽𝚃 𝙸𝙽 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝚂𝙴𝙽𝚃𝙸𝙽𝙴𝙻
+# `10. LOG ENRICHMENT IN MICROSOFT SENTINEL`
 
 ### Step 1: In Azure Portal, search for `Microsoft Sentinel` 
 
@@ -435,7 +435,7 @@ WindowsEvents
 
 ---
 
-# 11. 𝙲𝚁𝙴𝙰𝚃𝙸𝙽𝙶 𝙰 𝙼𝙰𝙿 𝚆𝙾𝚁𝙺𝙱𝙾𝙾𝙺 𝙸𝙽 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝚂𝙴𝙽𝚃𝙸𝙽𝙴𝙻
+# 11. CREATING A `MAP WORKBOOK`
 
 ### Step 1: In Azure Portal, search for `Microsoft Sentinel` 
 
@@ -519,7 +519,7 @@ friendly_location = strcat(cityname, " (", countryname, ")");
 
 ---
 
-# 12. 24 𝙷𝙾𝚄𝚁 𝚁𝙴𝚂𝚄𝙻𝚃𝚂
+# 12. `24-HOUR` RESULTS
 
 ### *This KQL query filters for failed login attempts (`Event ID 4625`) targeting the `honeypot VM` over a `24-hour` period starting on `July 21, 2025`, at `07:46 UTC`. Surprisingly, the results revealed `107,836` failed logon attempts!*
 
@@ -535,7 +535,7 @@ SecurityEvent
 
 ---
 
-# 13. 𝚃𝙾𝙿 5 𝙲𝙾𝚄𝙽𝚃𝚁𝙸𝙴𝚂
+# 13. `TOP 5 COUNTRIES`
 
 ```kql
 let GeoIPDB_FULL = _GetWatchlist("geoip");
@@ -563,7 +563,7 @@ WindowsEvents
 
 ---
 
-# 14. 𝚃𝙾𝙿 10 𝙰𝚃𝚃𝙰𝙲𝙺𝙴𝚁 𝙸𝙿 𝙰𝙳𝙳𝚁𝙴𝚂𝚂𝙴𝚂
+# 14. `TOP 10 ATTACKER IP ADDRESSES`
 
 ```kql
 SecurityEvent
@@ -576,7 +576,7 @@ SecurityEvent
 
 ---
 
-# 15. 𝙵𝙰𝙸𝙻𝙴𝙳 𝙻𝙾𝙶𝙾𝙽 𝙰𝚃𝚃𝙴𝙼𝙿𝚃𝚂 𝚃𝙸𝙼𝙴𝙻𝙸𝙽𝙴
+# `15. FAILED LOGON ATTEMPTS TIMELINE`
 
 ```kql
 SecurityEvent
@@ -593,7 +593,7 @@ SecurityEvent
 
 ---
 
-# 16. 𝙲𝚁𝙴𝙰𝚃𝙸𝙽𝙶 𝙰 𝙲𝚄𝚂𝚃𝙾𝙼 𝙳𝙴𝚃𝙴𝙲𝚃𝙸𝙾𝙽 𝚁𝚄𝙻𝙴
+# 16. CREATING A `CUSTOM DETECTION RULE`
 
 ### Step 1: In Azure Portal, search for `Microsoft Sentinel`
 
@@ -664,7 +664,7 @@ Review + Create
 
 ---
 
-# 17. 𝙸𝙽𝙲𝙸𝙳𝙴𝙽𝚃 𝚁𝙴𝚂𝙿𝙾𝙽𝚂𝙴 𝙸𝙽 𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝚂𝙴𝙽𝚃𝙸𝙽𝙴𝙻
+# 17. `INCIDENT RESPONSE` IN MICROSOFT SENTINEL
 
 ### Step 1: In Azure Portal, search for `Microsoft Sentinel`
 
@@ -764,7 +764,7 @@ Add Inbound Security Rule
 
 ---
 
-# 18. 𝙲𝙻𝙾𝚂𝙸𝙽𝙶 𝙾𝚄𝚃 𝚃𝙷𝙴 𝙸𝙽𝙲𝙸𝙳𝙸𝙴𝙽𝚃
+# 18. `CLOSING OUT THE INCIDENT`
 
 <img width="543" height="677" alt="Lab 77" src="https://github.com/user-attachments/assets/148e6c09-a7e3-42f7-8a3c-7d74f6d19fea" />
 
