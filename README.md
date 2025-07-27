@@ -32,7 +32,7 @@
 
 The objective of this project was to design and implement a simulated `Security Operations Center` (SOC) environment in `Microsoft Azure`, centered around a `Windows 10` virtual machine acting as a `honeypot`. The goal was to attract and analyze real-world unauthorized access attempts by exposing the VM to public traffic. Using tools such as `Microsoft Sentinel`, `Log Analytics Workspace`, and `Kusto Query Language` (KQL), I monitored, detected, and investigated threat activity. This project demonstrates core SOC capabilities, including threat detection, alerting, incident response, and visualization through workbooks.
 
-## 📜 TABLE OF CONTENTS
+## TABLE OF CONTENTS
 
 - [`1. SETUP AZURE SUBSCRIPTION`](#1-setup-azure-subscription)
 - [`2. CREATE A RESOURCE GROUP`](#2-create-a-resource-group)
