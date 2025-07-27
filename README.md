@@ -34,24 +34,24 @@ The objective of this project was to design and implement a simulated `Security 
 
 ## 📜 TABLE OF CONTENTS
 
-- `1. SETUP AZURE SUBSCRIPTION`
-- `2. CREATE A RESOURCE GROUP`
-- `3. CREATE A VIRTUAL NETWORK`
-- `4. CREATE A VIRTUAL MACHINE`
-- `5. CREATE A HONEYPOT`
-- `6. VALIDATE HONEYPOT EXPOSURE`
-- `7. CREATE A LOG ANALYTICS WORKSPACE`
-- `8. ACTIVATE MICROSOFT SENTINEL`
-- `9. 1-HOUR RESULTS`
-- `10. LOG ENRICHMENT IN MICROSOFT SENTINEL`
-- `11. CREATING A MAP WORKBOOK`
-- `12. 24-HOUR RESULTS`
-- `13. TOP 5 COUNTRIES`
-- `14. TOP 10 ATTACKER IP ADDRESSES`
-- `15. FAILED LOGON ATTEMPTS TIMELINE`
-- `16. CREATING A CUSTOM DETECTION RULE`
-- `17. INCIDENT RESPONSE IN MICROSOFT SENTINEL`
-- `18. CLOSING OUT THE INCIDENT`
+- [`1. SETUP AZURE SUBSCRIPTION`](#1-setup-azure-subscription)
+- [`2. CREATE A RESOURCE GROUP`](#2-create-a-resource-group)
+- [`3. CREATE A VIRTUAL NETWORK`](#3-create-a-virtual-network)
+- [`4. CREATE A VIRTUAL MACHINE`](#4-create-a-virtual-machine)
+- [`5. CREATE A HONEYPOT`](#5-create-a-honeypot)
+- [`6. VALIDATE HONEYPOT EXPOSURE`](#6-validate-honeypot-exposure)
+- [`7. CREATE A LOG ANALYTICS WORKSPACE`](#7-create-a-log-analytics-workspace)
+- [`8. ACTIVATE MICROSOFT SENTINEL`](#8-activate-microsoft-sentinel)
+- [`9. 1-HOUR RESULTS`](#9-1-hour-results)
+- [`10. LOG ENRICHMENT IN MICROSOFT SENTINEL`](#10-log-enrichment-in-microsoft-sentinel)
+- [`11. CREATING A MAP WORKBOOK`](#11-creating-a-map-workbook)
+- [`12. 24-HOUR RESULTS`](#12-24-hour-results)
+- [`13. TOP 5 COUNTRIES`](#13-top-5-countries)
+- [`14. TOP 10 ATTACKER IP ADDRESSES`](#14-top-10-attacker-ip-addresses)
+- [`15. FAILED LOGON ATTEMPTS TIMELINE`](#15-failed-logon-attempts-timeline)
+- [`16. CREATING A CUSTOM DETECTION RULE`](#16-creating-a-custom-detection-rule)
+- [`17. INCIDENT RESPONSE IN MICROSOFT SENTINEL`](#17-incident-response-in-microsoft-sentinel)
+- [`18. CLOSING OUT THE INCIDENT`](#18-closing-out-the-incident)
 
 ---
 
