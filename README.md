@@ -1,12 +1,12 @@
-<h1 = align=center>𝙸𝙼𝙿𝙻𝙴𝙼𝙴𝙽𝚃𝙸𝙽𝙶 𝙰 <code>𝚂𝙴𝙲𝚄𝚁𝙸𝚃𝚈 𝙾𝙿𝙴𝚁𝙰𝚃𝙸𝙾𝙽 𝙲𝙴𝙽𝚃𝙴𝚁</code>
+<h1 = align=center>IMPLEMENTING A <code>SECURITY OPERATION CENTER</code>
   
-  𝙰𝙽𝙳 `𝙷𝙾𝙽𝙴𝚈𝙿𝙾𝚃` 𝙸𝙽 `𝙼𝙸𝙲𝚁𝙾𝚂𝙾𝙵𝚃 𝙰𝚉𝚄𝚁𝙴`</h1>
+  AND `HONEYPOT` IN `MICROSOFT AZURE`</h1>
 
 <p = align=center>
 <img width="1548" height="748" alt="SOC Final drawio (1)" src="https://github.com/user-attachments/assets/aadd2f1a-4ab0-4cac-8c85-c942e5c91702" />
 </p>
 
-## 🛠️ TECHNOLOGY & PLATFORMS UTILIZED
+## 🛠️ `TECHNOLOGY & PLATFORMS` UTILIZED
 
 - *`Microsoft Azure:`*</br>
   Core cloud platform used to build and host the SOC and honeypot infrastructure.
@@ -28,11 +28,11 @@
 
   ---
 
-## 🎯 OBJECTIVE
+## 🎯 `OBJECTIVE`
 
 The objective of this project was to design and implement a simulated `Security Operations Center` (SOC) environment in `Microsoft Azure`, centered around a `Windows 10` virtual machine acting as a `honeypot`. The goal was to attract and analyze real-world unauthorized access attempts by exposing the VM to public traffic. Using tools such as `Microsoft Sentinel`, `Log Analytics Workspace`, and `Kusto Query Language` (KQL), I monitored, detected, and investigated threat activity. This project demonstrates core SOC capabilities, including threat detection, alerting, incident response, and visualization through workbooks.
 
-## TABLE OF CONTENTS
+## `TABLE OF CONTENTS`
 
 - [`1. SETUP AZURE SUBSCRIPTION`](#1-setup-azure-subscription)
 - [`2. CREATE A RESOURCE GROUP`](#2-create-a-resource-group)
