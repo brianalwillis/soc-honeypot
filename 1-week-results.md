@@ -16,7 +16,7 @@ SecurityEvent
 
 # 13. `TOP 5 COUNTRIES`
 
-### *This KQL query analyzes failed login attempts (Event ID 4625) by enriching the data with IP geolocation from a custom watchlist. It identifies the top five countries with the highest number of failed attempts, then summarizes and displays each country’s failure count along with geographic details like city, latitude, and longitude for visualization or threat analysis.*
+### *This KQL query analyzes failed login attempts (`Event ID 4625`) by enriching the data with `IP geolocation` from a custom watchlist. It identifies the `top five countries` with the highest number of failed attempts, then summarizes and displays each country’s failure count along with geographic details like city, latitude, and longitude for visualization or threat analysis.*
 
 ```kql
 let GeoIPDB_FULL = _GetWatchlist("geoip");
@@ -45,6 +45,8 @@ WindowsEvents
 ---
 
 # 14. `TOP 10 ATTACKER IP ADDRESSES`
+
+### *This KQL query identifies the `IP addresses` responsible for the most failed login attempts (`Event ID 4625`) within the time range of `July 21 to July 28, 2025`. It filters the security event logs for that event ID and time window, then counts the number of failed attempts per IP address.. The results are sorted in descending order to highlight the IPs with the highest number of failed logins.*
 
 ```kql
 SecurityEvent
