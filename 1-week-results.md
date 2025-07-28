@@ -73,3 +73,7 @@ SecurityEvent
 <img width="2156" height="985" alt="Honey 5" src="https://github.com/user-attachments/assets/061e5a1d-4407-498a-b7c7-bfd535873790" />
 
 ### *The timeline illustrates the volume of failed login attempts over time, totaling `315K`, with several notable spikes. `July 21st` around `8 PM` remains the highest at `70,400` failed logon attempts.*
+
+---
+
+### *See the full project here:</br>[`Implementing a SOC and Honeypot in Microsoft Azure`](https://github.com/brianalwillis/soc-honeypot/tree/main)*
