@@ -533,6 +533,17 @@ SecurityEvent
 | count
 ```
 
+```kql
+let GeoIPDB_FULL = _GetWatchlist("geoip");
+let WindowsEvents = SecurityEvent;
+WindowsEvents | where EventID == 4625
+| order by TimeGenerated desc
+| evaluate ipv4_lookup(GeoIPDB_FULL, IpAddress, network)
+| summarize FailureCount = count() by IpAddress, latitude, longitude, cityname, countryname
+| project FailureCount, AttackerIp = IpAddress, latitude, longitude, city = cityname, country = countryname,
+friendly_location = strcat(cityname, " (", countryname, ")");
+```
+
 <img width="1936" height="837" alt="Lab 11" src="https://github.com/user-attachments/assets/412ec00c-824c-4a4f-8d10-ae2ad22e8469" />
 
 ---
@@ -578,7 +589,7 @@ SecurityEvent
 
 ---
 
-# `15. FAILED LOGON ATTEMPTS TIMELINE`
+# 15. `FAILED LOGON ATTEMPTS TIMELINE`
 
 ```kql
 SecurityEvent
