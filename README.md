@@ -581,6 +581,7 @@ SecurityEvent
 ```kql
 SecurityEvent
 | where EventID == 4625
+| where TimeGenerated > ago(24h)
 | summarize FailedAttempts = count() by bin(TimeGenerated, 1h)
 | render columnchart
 ```
